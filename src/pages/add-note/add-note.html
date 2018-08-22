@@ -9,12 +9,22 @@
 
 <ion-content padding>
   Want to add a note?
-  <form (ngSubmit)="saveNote(f.value)" #f="ngForm">
+  <form [formGroup]="formGroup" (ngSubmit)="saveNote(formGroup.value)">
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" formControlName="date"></ion-datetime>
+    </ion-item>
     <ion-item>
       <ion-label>Title</ion-label>
-      <ion-textarea name="title" ngModel></ion-textarea>
+      <ion-input type="text" name="title" formControlName="title"></ion-input>
+      <div class="alert" *ngIf="!formGroup.controls['title'].valid && formGroup.controls['title'].touched">{{ titleAlert }}</div>
     </ion-item>
-    <button ion-button type="submit">Save Note</button>
+    <ion-item>
+      <ion-label>Note</ion-label>
+      <ion-input type="text" name="content" formControlName="content"></ion-input>
+      <div class="alert" *ngIf="!formGroup.controls['content'].valid && formGroup.controls['content'].touched">{{ contentAlert }}</div>
+    </ion-item>
+    <button ion-button type="submit" [disabled]="!formGroup.valid">Save Note</button>
   </form>
 
 </ion-content>

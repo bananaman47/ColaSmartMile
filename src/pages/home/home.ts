@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { AddNotePage } from '../add-note/add-note';
 import { NavigationPage } from '../navigation/navigation';
 import { NoteService } from '../../providers/note-service/note-service';
+import { Note } from '../../models/note.model';
 
 @Component({
   selector: 'page-home',
@@ -11,7 +12,7 @@ import { NoteService } from '../../providers/note-service/note-service';
 export class HomePage {
 
   // home.html is using this array below. We retrieve the array from ionViewWillEnter
-  notes: { title: string }[] = [];
+  notes: Promise<Note[]>;
 
   constructor(public navCtrl: NavController, private noteService: NoteService) {
   }
