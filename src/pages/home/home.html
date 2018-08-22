@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cola Simple App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let note of notes">
+      {{ note.title }}
+    </button>
+  </ion-list>
+  <button ion-button (click)="navigate()">Navigate!</button>
+  <button ion-button (click)="addNote()">Add Note</button>
+</ion-content>
