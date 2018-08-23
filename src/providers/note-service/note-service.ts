@@ -9,6 +9,7 @@ export class NoteService {
   // this class is a middleman that does all the work for home.ts, add-note.ts, navigation.ts //
 
   private notes: Note[] = [];
+  private note: Note;
 
   constructor(public storage: Storage) {
   }
@@ -28,6 +29,25 @@ export class NoteService {
       return [...this.notes]; // spread operator to return a copy of array
     }
   )
+  }
+
+  getNote(createDate: number){
+    return this.storage.get('notes').then((notes) => { // .get returns a promise of notes, so callback function is needed
+      this.note = [...notes].find(r => r.createDate === createDate); // finding a note by its createDate
+      return this.note;
+    })
+  }
+
+  /**
+  Here we're not deleting a note persay. We're using "filter"
+  to return the notes array with everything except for the note that
+  we don't want anymore.
+  **/
+  deleteNote(createDate: number){
+    this.notes = this.notes.filter((note) => {
+      return note.createDate !== createDate
+    })
+    this.storage.set('notes', this.notes);
   }
 
 }

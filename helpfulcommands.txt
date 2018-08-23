@@ -1,0 +1,5 @@
+git status
+git commit -a -m "message"
+git remote add origin https://github.com/bananaman47/ColaSmartMile.git
+
+
