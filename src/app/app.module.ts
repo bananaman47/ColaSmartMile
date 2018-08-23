@@ -11,13 +11,15 @@ import { NavigationPage } from '../pages/navigation/navigation';
 import { NoteService } from '../providers/note-service/note-service';
 import { IonicStorageModule } from '@ionic/storage';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ViewNotePage } from '../pages/view-note/view-note';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     AddNotePage,
-    NavigationPage
+    NavigationPage,
+    ViewNotePage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MyApp,
     HomePage,
     AddNotePage,
-    NavigationPage
+    NavigationPage,
+    ViewNotePage
   ],
   providers: [
     StatusBar,
