@@ -1,4 +1,4 @@
-# endeavor-begin
+# ColaSmartMile
 
 #### Setup:
 - Install Node.JS on your machine if you haven't already.
