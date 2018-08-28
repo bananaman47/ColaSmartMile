@@ -1,0 +1,32 @@
+{
+  "name": "ColaSmartApp",
+  "description": "Ionic Project to integrate phone navigation",
+  "main": "",
+  "authors": [
+    "Ionic Framework"
+  ],
+  "dependencies": {
+    "mapwize.js-dist": "2.6.2"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mapwize",
+    "indoor",
+    "inside",
+    "building",
+    "map",
+    "maps",
+    "leaflet",
+    "angular",
+    "ionic"
+  ],
+  "homepage": "https://github.com/bananaman47/ColaSmartMile",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
