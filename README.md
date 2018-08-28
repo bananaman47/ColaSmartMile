@@ -6,14 +6,10 @@
 
         $ npm i -g ionic cordova
 
-- Go to the folder you pulled from this repo, open a command line there and run:
-
-        $ npm i
-        
 - Go to the directory where your package.json file is located and run:
 
-        $ npm install
-        
+        $ npm i
+
 - Finally deploy locally:
 
         $ ionic serve
