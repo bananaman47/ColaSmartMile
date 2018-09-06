@@ -1,12 +1,13 @@
 {
-  "name": "ColaSmartApp",
+  "name": "colasmartapp",
   "description": "Ionic Project to integrate phone navigation",
   "main": "",
   "authors": [
     "Ionic Framework"
   ],
   "dependencies": {
-    "mapwize.js-dist": "2.6.2"
+    "mapwize.js-dist": "2.6.2",
+    "mapwize.js": "mapwize.js-dist#^2.6.2"
   },
   "license": "MIT",
   "keywords": [

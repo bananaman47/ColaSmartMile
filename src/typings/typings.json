@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "navigation": "file:./navigation.d.ts"
+  }
+}

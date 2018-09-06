@@ -4,10 +4,10 @@ import { NavigationPage } from './navigation';
 
 @NgModule({
   declarations: [
-    NavigationPage,
+    NavigationPage, // imported from ./navigation, aka "navigation.html"
   ],
   imports: [
-    IonicPageModule.forChild(NavigationPage),
+    IonicPageModule.forChild(NavigationPage)
   ],
 })
 export class NavigationPageModule {}
