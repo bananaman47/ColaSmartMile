@@ -8,8 +8,7 @@
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint",
-    "postinstall": "bower install"
+    "lint": "ionic-app-scripts lint"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
@@ -29,7 +28,6 @@
     "@types/base-64": "^0.1.2",
     "@types/utf8": "^2.1.6",
     "base-64": "^0.1.0",
-    "bower": "^1.8.4",
     "cordova-ios": "4.5.5",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.1.2",
@@ -41,7 +39,6 @@
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "mapwize": "^3.1.1",
-    "mapwize-node-api": "file:src/assets/data/node_wrapper_api/mapwize-node-api",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "utf8": "^3.0.0",

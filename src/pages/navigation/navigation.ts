@@ -31,5 +31,17 @@ export class NavigationPage{
      map.on('mapwize:ready', () => {
        // Naman is ready to kick some butt
      });
+
+     map.on( 'mapwize:click', ( e ) => {
+       map.removeMarkers();
+       console.log( e );
+
+       if( e.place ){
+         map.addMarkerOnPlace( e.place );
+       } else {
+         map.addMarker({ lat: e.lngLat.lat, lng: e.lngLat.lng, floor: map.getFloor() });
+       }
+     });
+
   }
 }
