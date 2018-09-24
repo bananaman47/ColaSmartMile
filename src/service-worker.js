@@ -18,6 +18,7 @@ self.toolbox.precache(
     './build/vendor.js',
     './build/main.css',
     './build/polyfills.js',
+    './src/assets/css/'
     'index.html',
     'manifest.json'
   ]
