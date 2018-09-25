@@ -19,10 +19,10 @@
   position: relative;
 }
 
-.ion-page ion-content{
-  position: relative;
-}
-
 ion-header{
   position: static;
+}
+
+ion-content{
+  z-index: -1;
 }

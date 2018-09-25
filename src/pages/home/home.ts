@@ -39,7 +39,6 @@ export class HomePage {
   }
 
   getAllNotes(){ // calling the noteservice's method we made
-    console.log(this.noteService.getAllNotes());
     return this.noteService.getAllNotes();
   }
 

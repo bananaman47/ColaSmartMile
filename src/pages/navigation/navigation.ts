@@ -15,27 +15,29 @@ export class NavigationPage{
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NavigationPage');
 
     const map = new Mapwize.Map({
        container: 'Naman',
+       maxBounds: [[-81.03315,34.01635],[-81.03055,34.01865]],
        interactive: true,
        bearingSnap: 7,
-       zoom: 70,
+       zoom: 19,
        useBrowserLocation: false,
        organizationId: "5b5f2b23b0b03f00043e18f2"
      });
 
-     console.log( map );
-
      map.centerOnVenue('5b5f2bb802a3720004d6182a');
      map.setFloor(3)
      map.on('mapwize:ready', () => {
+       map.grantAccess('17a382bacb754cf3').then(() => {
 
+       }).catch( err => {
+         console.log( err );
+       });
      });
 
      map.on( 'mapwize:click', e => {
-       map.removeMarkers();
+       map.removeMarkers();;
 
        if( e.place ){
          map.addMarkerOnPlace( e.place );
@@ -48,10 +50,16 @@ export class NavigationPage{
            options: options
          }).then( direction => {
            map.setDirection( direction, options );
-         })
+         });
+
        } else {
          map.addMarker({ lat: e.lngLat.lat, lng: e.lngLat.lng, floor: map.getFloor() });
+         map.removeDirection();
        }
+     });
+
+     map.on( 'mapwize:userpositionchange', e => {
+       map.addMarker({ lat: e.userPosition.latitude, lng: e.userPosition.longitude });
      });
   }
 }
