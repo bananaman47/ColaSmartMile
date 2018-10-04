@@ -4,7 +4,7 @@
 - Install Node.JS on your machine if you haven't already.
 - Run the following line of code in a command line if you haven't already:
 
-        $ npm i -g ionic cordova bower
+        $ npm i -g ionic cordova
 
 - Go to the directory where your package.json file is located and run:
 
